@@ -1,9 +1,9 @@
 fun main() {
 
-    println("Olá")
+    testaAutenticacao()
 
-   testaFuncionarios()
 }
+
 
 
 

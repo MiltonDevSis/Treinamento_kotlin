@@ -4,6 +4,6 @@ class CauculadoraBonificacao {
         private set
 
     fun regitra(funcionario: Funcionario) {
-        this.total += funcionario.bonificacao()
+        this.total += funcionario.bonificacao
     }
 }

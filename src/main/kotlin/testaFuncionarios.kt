@@ -30,12 +30,12 @@ fun testaFuncionarios() {
     println("Cpf: ${maria.cpf}")
     println("Salario: ${maria.salario}")
 
-    println("Bonificação: ${maria.bonificacao()}")
+    println("Bonificação: ${maria.bonificacao}")
     println()
     println("Nome: ${alex.nome}")
     println("Cpf: ${alex.cpf}")
     println("Salario: ${alex.salario}")
-    println("Bonificação: ${alex.bonificacao()}")
+    println("Bonificação: ${alex.bonificacao}")
 
     if (alex.autenticar(123)) {
         println("Sucesso")
@@ -47,7 +47,7 @@ fun testaFuncionarios() {
     println("Cpf: ${gui.cpf}")
     println("Salario: ${gui.salario}")
     println("PLR: ${gui.plr}")
-    println("Bonificação: ${gui.bonificacao()}")
+    println("Bonificação: ${gui.bonificacao}")
 
     if (gui.autenticar(321)) {
         println("Sucesso")

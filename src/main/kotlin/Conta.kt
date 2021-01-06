@@ -1,9 +1,9 @@
-open class Conta(
+abstract class Conta(
     val titular: String,
     val numero: Int
 ) {
     var saldo = 0.0
-    private set
+    protected set
 
     fun depositar(valor: Double) {
         if (valor > 0) {
@@ -11,12 +11,7 @@ open class Conta(
         }
     }
 
-    open fun sacar(valor: Double) {
-
-        if (saldo >= valor) {
-            saldo -= valor
-        }
-    }
+    abstract fun sacar(valor: Double)
 
     fun transferir(valor: Double, contaDestino: Conta): Boolean {
         if (saldo >= valor) {
