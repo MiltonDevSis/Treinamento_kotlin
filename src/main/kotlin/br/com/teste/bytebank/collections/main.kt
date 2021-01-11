@@ -15,7 +15,35 @@ fun main() {
     }
     println(minhaFuncaoAnonima(8, 8))
 
+//    (exemplo 01)
+//    val cauculaBonificacao : (Double) -> Double = {
+//        if (it > 1000.0){
+//            return@lambda it + 50
+//        }
+//        it + 100
+//    }
+//    println(cauculaBonificacao(1000.0))
+
+    // (exemplo 02)  dar nome ao it(no caso salario, expressao(label) @lambda para ter multiplos retornos e especificar o parameto)
+    val cauculaBonificacao : (salario: Double) -> Double = lambda@{ salario ->
+        if (salario > 1000.0){
+            return@lambda salario + 50
+        }
+        salario + 100
+    }
+    println(cauculaBonificacao(1100.0))
+
+    val cauculaBonificacaoAnonimo: (salario: Double) -> Double = fun (salario) : Double {
+        if (salario > 1000.0){
+            return salario + 50
+        }
+       return salario + 100
+    }
+    println(cauculaBonificacaoAnonimo(1000.0))
+
 }
+
+
 
 fun testaTipoFuncaoClasse() {
     val minhaFuncaoClasse: (Int, Int) -> Int = Soma()
