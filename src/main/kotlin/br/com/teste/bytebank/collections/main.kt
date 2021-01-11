@@ -20,5 +20,14 @@ fun main() {
     )
         .filter { endereco -> endereco.complemento.isNotEmpty() }
         .let(::println)
+
+    soma(5, 10) {
+        println(it)
+    }
+}
+
+fun soma (a: Int, b: Int, resultado: (Int) -> Unit) {
+    println("Soma sendo executada")
+    resultado(a + b)
 }
 
