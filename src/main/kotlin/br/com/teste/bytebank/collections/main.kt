@@ -2,19 +2,36 @@ package br.com.teste.bytebank.collections
 
 fun main() {
 
-    val minhaFuncao: () -> Unit = ::teste
-    println(minhaFuncao())
+    testaTipoFuncaoReferencia()
+    testaTipoFuncaoClasse()
 
-    val minhaFuncaoClasse: () -> Unit = Teste()
-    println(minhaFuncaoClasse())
+//    val minhaFuncaoLambda: () -> Unit = {
+//        println("Executa como lambda")
+//    }
+//    println(minhaFuncaoLambda())
+//
+//    val minhaFuncaoAnonima: () -> Unit = fun() {
+//        println("Executa como anonima")
+//    }
+//    println(minhaFuncaoAnonima())
 
 }
-fun teste() {
-    println("Executa teste")
+
+fun testaTipoFuncaoClasse() {
+    val minhaFuncaoClasse: (Int, Int) -> Int = Soma()
+    println(minhaFuncaoClasse(5, 15))
 }
 
-class Teste: () -> Unit{
-    override fun invoke() {
-        println("Executa invoke")
-    }
+fun testaTipoFuncaoReferencia() {
+    val minhaFuncao : (Int, Int) -> Int = ::soma
+    println(minhaFuncao(5, 10))
+}
+
+fun soma(a: Int, b: Int) : Int {
+    return a + b
+}
+
+class Soma: (Int, Int) -> Int {
+    override fun invoke(a: Int, b: Int): Int = a + b
+
 }
