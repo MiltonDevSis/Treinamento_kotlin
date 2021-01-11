@@ -2,18 +2,18 @@ package br.com.teste.bytebank.collections
 
 fun main() {
 
-    testaTipoFuncaoReferencia()
-    testaTipoFuncaoClasse()
+//    testaTipoFuncaoReferencia()
+//    testaTipoFuncaoClasse()
 
-//    val minhaFuncaoLambda: () -> Unit = {
-//        println("Executa como lambda")
-//    }
-//    println(minhaFuncaoLambda())
-//
-//    val minhaFuncaoAnonima: () -> Unit = fun() {
-//        println("Executa como anonima")
-//    }
-//    println(minhaFuncaoAnonima())
+    val minhaFuncaoLambda: (Int, Int) -> Int = { a, b -> a + b }// func. lambda retorna a ultima expressao a direita
+    //val minhaFuncaoLambda = { a; Int, b: Int -> a + b }
+    println(minhaFuncaoLambda(15, 10))
+
+    val minhaFuncaoAnonima: (Int , Int) -> Int = fun(a, b) : Int {
+        println("Executa como anonima")
+        return a + b
+    }
+    println(minhaFuncaoAnonima(8, 8))
 
 }
 
